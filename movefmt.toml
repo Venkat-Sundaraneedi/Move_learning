@@ -1,0 +1,12 @@
+max_width = 90
+indent_size = 2
+hard_tabs = false
+tab_spaces = 2
+emit_mode = "Overwrite"
+verbose = "Normal"
+prefer_one_line_for_short_branch_blk = true
+prefer_one_line_for_short_call_para_list = true
+prefer_one_line_for_short_fn_header_para_list = true
+prefer_one_line_for_short_lambda_para_list = true
+skip_formatting_dirs = ""
+auto_apply_package = false
