@@ -271,5 +271,5 @@ module my_addrx::Basic {
     fun test_operations() {
         arthmetic_operations(10, 3);
     }
-}
 
+}
