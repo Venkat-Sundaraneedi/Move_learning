@@ -34,6 +34,11 @@ module my_addrx::Intermediate {
 
     }
 
+    #[test]
+    fun test_const() {
+        constants();
+    }
+
     // ================================================================
     // │                          Signer                              │
     // ================================================================
@@ -48,15 +53,6 @@ module my_addrx::Intermediate {
 
         let myresource = borrow_global_mut<MyResource>(signer_address);
         myresource.value += 1;
-    }
-
-    // ================================================================
-    // │                          Tests                               │
-    // ================================================================
-
-    #[test]
-    fun test_const() {
-        constants();
     }
 }
 

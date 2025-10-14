@@ -4,7 +4,7 @@ script {
 
     const ONE: u64 = 1;
 
-    fun main(x: u64) {
+    fun main_basic(x: u64) {
         let sum = x + ONE;
         debug::print(&sum)
     }

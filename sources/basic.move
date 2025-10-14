@@ -2,6 +2,9 @@ module my_addrx::Basic {
     use std::debug::print;
     use std::string::{String, utf8};
 
+    #[test_only]
+    use std::vector;
+
     // ================================================================
     // │                      PrimitiveTypes                          │
     // ================================================================
@@ -29,6 +32,11 @@ module my_addrx::Basic {
 
     }
 
+    #[test]
+    fun test_primitive_types() {
+        primitive_types();
+    }
+
     // ================================================================
     // │                          Strings                             │
     // ================================================================
@@ -40,6 +48,19 @@ module my_addrx::Basic {
     fun greeting_vec(): vector<u8> {
         let greet: vector<u8> = b"Welcome to Aptos move by examples Vector ex";
         return greet
+    }
+
+    #[test]
+    fun test_greeting_string() {
+        let greet = greeting_string();
+        print(&greet);
+    }
+
+    #[test]
+    fun test_greeting_vec() {
+        let greet = greeting_vec();
+        print(&greet);
+        print(&utf8(greet));
     }
 
     // ================================================================
@@ -59,6 +80,11 @@ module my_addrx::Basic {
         let a = /*You can put block comment here*/ 12345;
         print(& /*Even here*/ a);
 
+    }
+
+    #[test]
+    fun test_comments() {
+        printing_comments();
     }
 
     // ================================================================
@@ -84,6 +110,20 @@ module my_addrx::Basic {
         if (num % 2 == 0) return (num, true) else return (num, false)
     }
 
+    #[test]
+    fun test_fun() {
+        greet_fun();
+        sqaure_fun(10);
+
+        let m = max_fun(53, 10);
+        print(&m);
+
+        let (v1, v2) = is_even_fun(4);
+        print(&v1);
+        print(&v2);
+
+    }
+
     // ================================================================
     // │                      control_flow                            │
     // ================================================================
@@ -94,6 +134,11 @@ module my_addrx::Basic {
         } else {
             print(&utf8(b"Else block"));
         }; //if is an expression therefore it should be end with a semicolon.
+    }
+
+    #[test]
+    fun test_contro_flow() {
+        control_flow();
     }
 
     // ================================================================
@@ -136,6 +181,16 @@ module my_addrx::Basic {
         sum
     }
 
+    #[test]
+    fun test_loops() {
+        let sum = sum_using_while(10);
+        print(&sum);
+        let sum = sum_using_loop(10);
+        print(&sum);
+        let sum = sum_using_for(10);
+        print(&sum);
+    }
+
     // ================================================================
     // │                          Error                               │
     // ================================================================
@@ -149,6 +204,14 @@ module my_addrx::Basic {
 
     fun isEven_assert(num: u64) {
         assert!(num % 2 == 0, 11);
+    }
+
+    #[test]
+    fun test_err() {
+        isEven_abort(2);
+        isEven_assert(2);
+        // isEven(3); // This will give error coz its odd num.
+        // isEven_assert(3); // This will give error coz its odd num.
     }
 
     // ================================================================
@@ -170,6 +233,19 @@ module my_addrx::Basic {
         return newUser
     }
 
+    #[test]
+    fun test_create_friend() {
+        let user1 = User { name: utf8(b"Tony"), age: 50 };
+
+        let users = Users {
+            list_of_users: vector::empty<User>()
+        };
+
+        let createdUser = create_user(user1, &mut users);
+        print(&users);
+        assert!(createdUser.name == utf8(b"Tony"), 0);
+    }
+
     // ================================================================
     // │                        Operations                            │
     // ================================================================
@@ -185,86 +261,6 @@ module my_addrx::Basic {
         let ans = a % b;
         print(&ans);
 
-    }
-
-    // ================================================================
-    // │                          Tests                               │
-    // ================================================================
-
-    #[test_only]
-    use std::vector;
-
-    #[test]
-    fun test_primitive_types() {
-        primitive_types();
-    }
-
-    #[test]
-    fun test_greeting_string() {
-        let greet = greeting_string();
-        print(&greet);
-    }
-
-    #[test]
-    fun test_greeting_vec() {
-        let greet = greeting_vec();
-        print(&greet);
-        print(&utf8(greet));
-    }
-
-    #[test]
-    fun test_comments() {
-        printing_comments();
-    }
-
-    #[test]
-    fun test_fun() {
-        greet_fun();
-        sqaure_fun(10);
-
-        let m = max_fun(53, 10);
-        print(&m);
-
-        let (v1, v2) = is_even_fun(4);
-        print(&v1);
-        print(&v2);
-
-    }
-
-    #[test]
-    fun test_contro_flow() {
-        control_flow();
-    }
-
-    #[test]
-    fun test_loops() {
-        let sum = sum_using_while(10);
-        print(&sum);
-        let sum = sum_using_loop(10);
-        print(&sum);
-        let sum = sum_using_for(10);
-        print(&sum);
-    }
-
-    #[test]
-    fun test_err() {
-        isEven_abort(2);
-        isEven_assert(2);
-        // isEven(3); // This will give error coz its odd num.
-        // isEven_assert(3); // This will give error coz its odd num.
-    }
-
-    #[test]
-    fun test_create_friend() {
-        let user1 = User { name: utf8(b"Tony"), age: 50 };
-
-        let users = Users {
-            list_of_users: vector::empty<User>()
-        };
-
-        let createdUser = create_user(user1, &mut users);
-        print(&users);
-        assert!(createdUser.name == utf8(b"Tony"), 0);
     }
 
     #[test]
