@@ -8,6 +8,7 @@ module my_addrx::Basic {
   // ================================================================
   // │                      PrimitiveTypes                          │
   // ================================================================
+
   fun primitive_types() {
 
     //Integers: u8,u64,u128
@@ -40,6 +41,7 @@ module my_addrx::Basic {
   // ================================================================
   // │                          Strings                             │
   // ================================================================
+
   fun greeting_string(): String {
     let greet: String = utf8(b"Welcome to Aptos Move by Example String");
     return greet
@@ -127,6 +129,7 @@ module my_addrx::Basic {
   // ================================================================
   // │                      control_flow                            │
   // ================================================================
+
   fun control_flow() {
     let val: bool = true;
     if (val) {
@@ -194,6 +197,7 @@ module my_addrx::Basic {
   // ================================================================
   // │                          Error                               │
   // ================================================================
+
   fun isEven_abort(num: u64) {
     if (num % 2 == 0) {
       print(&utf8(b"No Error as the Number is Even"));
@@ -249,6 +253,7 @@ module my_addrx::Basic {
   // ================================================================
   // │                        Operations                            │
   // ================================================================
+
   fun arthmetic_operations(a: u64, b: u64) {
     let ans = a + b;
     print(&ans);
