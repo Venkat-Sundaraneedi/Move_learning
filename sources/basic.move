@@ -5,9 +5,6 @@ module my_addrx::Basic {
   #[test_only]
   use std::vector;
 
-  // ================================================================
-  // │                      PrimitiveTypes                          │
-  // ================================================================
   fun primitive_types() {
 
     //Integers: u8,u64,u128
