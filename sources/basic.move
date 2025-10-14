@@ -269,4 +269,3 @@ module my_addrx::Basic {
   }
 }
 
-}
