@@ -11,9 +11,16 @@ module my_addrx::Basic {
         let a: u8 = 10;
         let b: u64 = 1000;
         let c: u128 = 10000;
+        let d: u32 = 100;
         print(&a);
         print(&b);
         print(&c);
+        print(&d);
+
+
+
+
+
 
         //Boolean: true,false
         let b1: bool = true;
