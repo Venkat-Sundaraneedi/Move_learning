@@ -272,4 +272,3 @@ module my_addrx::Basic {
         arthmetic_operations(10, 3);
     }
 }
-
