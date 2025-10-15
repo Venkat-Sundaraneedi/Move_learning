@@ -37,10 +37,20 @@ Follow these steps to submit your changes:
 3.  Keep examples simple and clear for beginners.
 4.  Add **new `#[test]` functions** to your code to prove correctness and demonstrate usage.
 
-#### 3. Testing
+#### 3. Formatting
+
+To ensure consistent code style across the project, please run the Move formatter before committing:
+
+```bash
+# Run the Move formatter over all files
+movefmt
+```
+
+#### 4. Testing
 
 You must ensure that all existing and new tests pass before submitting.
 
 ```bash
 # Run all tests
 aptos move test
+```
