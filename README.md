@@ -1,4 +1,4 @@
-# 🚀 Project Chimera: Move Learning Examples
+# 🚀 Move Learning Examples
 
 > A curated, beginner-friendly collection of examples for learning the **Move Programming Language** on the Aptos Blockchain.
 
