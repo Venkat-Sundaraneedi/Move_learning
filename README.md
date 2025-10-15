@@ -10,29 +10,15 @@
 
 ## 📚 Table of Contents
 
-1. [✨ Key Features](#-key-features)
-2. [⚡ Getting Started](#⚡-getting-started)
-3. [📖 Learning Modules](#-learning-modules)
+1. [⚡ Getting Started](#⚡-getting-started)
+2. [📖 Learning Modules](#-learning-modules)
     * [Basic Concepts](#basic-concepts)
     * [Intermediate Concepts](#intermediate-concepts)
     * [Function Visibility](#function-visibility)
-4. [💻 Scripts](#-scripts)
-5. [🧪 Testing](#-testing)
-6. [🤝 Contributing](#-contributing)
-7. [📄 License](#-license)
-
----
-
-## ✨ Key Features
-
-This repository is designed to make learning Move **simple, practical, and interactive** by focusing on core concepts:
-
-*  **🧱 Primitive Types:** Clear examples of `u8`, `u64`, `bool`, and `address`.
-*  **🔁 Control Flow:** Practical demonstrations of `if/else`, `while`, `for`, and infinite `loop` constructs.
-*  **🛡️ Error Handling:** Concise usage of **`abort`** and **`assert!`** for predictable error management.
-*  **📦 Data Structures:** Examples for defining **`structs`** with abilities like `key`, `drop`, `store`, and `copy`.
-*  **👤 Signer Interaction:** Scripts demonstrating how to use the **`&signer`** type and retrieve its address.
-*  **🔎 Module Visibility:** Deep dive into `public`, `private`, and the advanced **`public(friend)`** visibility modifier.
+3. [💻 Scripts](#-scripts)
+4. [🧪 Testing](#-testing)
+5. [🤝 Contributing](#-contributing)
+6. [📄 License](#-license)
 
 ---
 
