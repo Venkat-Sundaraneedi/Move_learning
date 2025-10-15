@@ -27,12 +27,12 @@
 
 This repository is designed to make learning Move **simple, practical, and interactive** by focusing on core concepts:
 
-*  **🧱 Primitive Types:** Clear examples of `u8`, `u64`, `bool`, and `address` usage[cite: 34, 35, 36].
-*  **🔁 Control Flow:** Practical demonstrations of `if/else`, `while`, `for`, and infinite `loop` constructs[cite: 50, 54, 58, 61].
-*  **🛡️ Error Handling:** Concise usage of **`abort`** and **`assert!`** for predictable error management[cite: 66, 67].
-*  **📦 Data Structures:** Examples for defining **`structs`** with abilities like `key`, `drop`, `store`, and `copy`[cite: 70].
-*  **👤 Signer Interaction:** Scripts demonstrating how to use the **`&signer`** type and retrieve its address[cite: 78, 9, 10].
-*  **🔎 Module Visibility:** Deep dive into `public`, `private`, and the advanced **`public(friend)`** visibility modifier[cite: 28, 29].
+*  **🧱 Primitive Types:** Clear examples of `u8`, `u64`, `bool`, and `address`.
+*  **🔁 Control Flow:** Practical demonstrations of `if/else`, `while`, `for`, and infinite `loop` constructs.
+*  **🛡️ Error Handling:** Concise usage of **`abort`** and **`assert!`** for predictable error management.
+*  **📦 Data Structures:** Examples for defining **`structs`** with abilities like `key`, `drop`, `store`, and `copy`.
+*  **👤 Signer Interaction:** Scripts demonstrating how to use the **`&signer`** type and retrieve its address.
+*  **🔎 Module Visibility:** Deep dive into `public`, `private`, and the advanced **`public(friend)`** visibility modifier.
 
 ---
 
@@ -72,23 +72,23 @@ All core educational content resides in the `sources/` directory, structured by 
 
 ### Basic Concepts (`sources/basic.move`)
 
-*  **`primitive_types()`:** Shows usage of `u8`, `u64`, `u128`, `bool`, and `address`[cite: 34, 35, 36].
-*  **`sum_using_*`:** Demonstrates calculation loops using `while`, `for`, and `loop`[cite: 54, 58, 61].
-*  **`isEven_abort` / `isEven_assert`:** Examples of proper error handling[cite: 66, 67].
-*  **`create_user`:** A practical example of defining and using structs[cite: 70, 71].
+*  **`primitive_types()`:** Shows usage of `u8`, `u64`, `u128`, `bool`, and `address`.
+*  **`sum_using_*`:** Demonstrates calculation loops using `while`, `for`, and `loop`.
+*  **`isEven_abort` / `isEven_assert`:** Examples of proper error handling.
+*  **`create_user`:** A practical example of defining and using structs.
 
 ### Intermediate Concepts (`sources/intermediate.move`)
 
-*  **`local_variables()`:** Covers variable assignment, type annotations, and variable shadowing[cite: 2, 3, 5].
-*  **`constants()`:** Demonstrates declaration and usage of module-level constants[cite: 6, 7].
-*  **Vectors & Strings:** Examples using byte strings (`b"..."`) and hex strings (`x"..."`) for `vector<u8>`[cite: 11, 12].
-*  **Signer:** Shows how to use the `&signer` type and the `signer::address_of` function[cite: 9, 10].
-*  **Uses & Aliases:** Comprehensive examples of various `use` declaration syntax, including aliases and block scoping[cite: 18, 19, 24].
+*  **`local_variables()`:** Covers variable assignment, type annotations, and variable shadowing.
+*  **`constants()`:** Demonstrates declaration and usage of module-level constants.
+*  **Vectors & Strings:** Examples using byte strings (`b"..."`) and hex strings (`x"..."`) for `vector<u8>`.
+*  **Signer:** Shows how to use the `&signer` type and the `signer::address_of` function.
+*  **Uses & Aliases:** Comprehensive examples of various `use` declaration syntax, including aliases and block scoping.
 
 ### Function Visibility (`sources/fun_visibility.move`)
 
-*  **`public(friend)`:** Explains the restricted access modifier where only modules listed in the `friend` declaration can call the function[cite: 28, 29].
-*  **`entry fun foo()`:** Demonstrates the structure of an externally callable entry function[cite: 30, 31].
+*  **`public(friend)`:** Explains the restricted access modifier where only modules listed in the `friend` declaration can call the function.
+*  **`entry fun foo()`:** Demonstrates the structure of an externally callable entry function.
 
 ---
 
@@ -96,14 +96,14 @@ All core educational content resides in the `sources/` directory, structured by 
 
 Scripts are used to execute logic outside of modules, often as transaction payload examples.
 
-*  **`script_basic.move`:** A simple example demonstrating basic arithmetic and using `std::debug::print`[cite: 80, 81].
-*  **`script_signer.move`:** An example showing how to assert the address of the transaction **`signer`**[cite: 78].
+*  **`script_basic.move`:** A simple example demonstrating basic arithmetic and using `std::debug::print`.
+*  **`script_signer.move`:** An example showing how to assert the address of the transaction **`signer`**.
 
 ---
 
 ## 🧪 Testing
 
- All modules include inline test functions marked with `#[test]` and `#[test_only]`[cite: 9, 33]. This ensures the examples are always working and provides immediate confirmation of the expected behavior.
+ All modules include inline test functions marked with `#[test]` and `#[test_only]`. This ensures the examples are always working and provides immediate confirmation of the expected behavior.
 
 Run all tests with:
 ```bash
