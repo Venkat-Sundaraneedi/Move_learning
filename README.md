@@ -1,210 +1,110 @@
-### README.md
+# 🚀 Project Chimera: Move Learning Examples
 
-```markdown
-# 🚀 Move Learning Examples
+> A curated, beginner-friendly collection of examples for learning the **Move Programming Language** on the Aptos Blockchain.
 
-Welcome to **Move Learning**, a curated collection of examples and exercises to help beginners learn the **Move programming language**, primarily used in the **Aptos blockchain**. This repository guides learners from **basic concepts** to **intermediate modules and scripts**.
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Move Version](https://img.shields.io/badge/Move-Aptos-brightgreen)](https://aptos.dev/)
+[![Made with Aptos CLI](https://img.shields.io/badge/Tool-Aptos%20CLI-red)](https://aptos.dev/cli-tools/aptos-cli)
 
 ---
 
 ## 📚 Table of Contents
 
-1. [Project Overview](#project-overview)
-2. [Folder Structure](#folder-structure)
-3. [Getting Started](#getting-started)
-4. [Learning Modules](#learning-modules)
-5. [Scripts](#scripts)
-6. [Testing](#testing)
-7. [Contributing](#contributing)
-8. [License](#license)
+1. [✨ Key Features](#-key-features)
+2. [⚡ Getting Started](#⚡-getting-started)
+3. [📖 Learning Modules](#-learning-modules)
+    * [Basic Concepts](#basic-concepts)
+    * [Intermediate Concepts](#intermediate-concepts)
+    * [Function Visibility](#function-visibility)
+4. [💻 Scripts](#-scripts)
+5. [🧪 Testing](#-testing)
+6. [🤝 Contributing](#-contributing)
+7. [📄 License](#-license)
 
 ---
 
-## 📝 Project Overview
+## ✨ Key Features
 
-This repository is designed for beginners and includes:
+This repository is designed to make learning Move **simple, practical, and interactive** by focusing on core concepts:
 
-- **Primitive Types**: integers, booleans, addresses, strings
-- **Control Flow & Loops**: `if`, `while`, `for`, and `loop` constructs
-- **Functions**: returning single/multiple values, error handling
-- **Structs**: creating and managing user-defined types
-- **Module Visibility**: public, private, friend, entry functions
-- **Scripts**: simple examples demonstrating basic operations
-
-The goal is to **make learning Move simple, practical, and interactive**.
-
----
-
-## 📂 Folder Structure
-
-```
-
-Move-Learning/
-├── sources/
-│   ├── basic.move           # Basic Move examples (types, functions, loops, structs)
-│   ├── intermediate.move    # Intermediate concepts (visibility, entry functions)
-│   ├── fun_visibility.move  # Function visibility examples
-│   ├── script_basic.move    # Simple Move script examples
-│   └── script_signer.move   # Scripts interacting with signer addresses
-├── Move.toml                # Project configuration
-├── README.md                # Project overview and instructions
-├── CONTRIBUTING.md          # Contribution guidelines
-└── LICENSE                  # License details
-
-````
+* [cite_start]**🧱 Primitive Types:** Clear examples of `u8`, `u64`, `bool`, and `address` usage[cite: 34, 35, 36].
+* [cite_start]**🔁 Control Flow:** Practical demonstrations of `if/else`, `while`, `for`, and infinite `loop` constructs[cite: 50, 54, 58, 61].
+* [cite_start]**🛡️ Error Handling:** Concise usage of **`abort`** and **`assert!`** for predictable error management[cite: 66, 67].
+* [cite_start]**📦 Data Structures:** Examples for defining **`structs`** with abilities like `key`, `drop`, `store`, and `copy`[cite: 70].
+* [cite_start]**👤 Signer Interaction:** Scripts demonstrating how to use the **`&signer`** type and retrieve its address[cite: 78, 9, 10].
+* [cite_start]**🔎 Module Visibility:** Deep dive into `public`, `private`, and the advanced **`public(friend)`** visibility modifier[cite: 28, 29].
 
 ---
 
 ## ⚡ Getting Started
 
-1. **Install Aptos CLI**
-   Follow the official [Aptos CLI Installation Guide](https://aptos.dev/cli-tools/aptos-cli)
+The project uses the **Aptos CLI** for compilation and testing.
 
-2. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/move-learning.git
-   cd move-learning
-````
+### Prerequisites
 
-3. **Compile Move code**
+1.  **Install Aptos CLI:** Follow the official [Aptos CLI Installation Guide](https://aptos.dev/cli-tools/aptos-cli).
 
-   ```bash
-   aptos move compile
-   ```
+### Installation and Setup
 
-4. **Run tests**
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/yourusername/move-learning.git](https://github.com/yourusername/move-learning.git)
+    cd move-learning
+    ```
 
-   ```bash
-   aptos move test
-   ```
+2.  **Compile the modules:**
+    ```bash
+    aptos move compile
+    ```
 
-> ⚠️ Ensure your Move environment is set up properly before running scripts.
+3.  **Run all included tests:**
+    ```bash
+    aptos move test
+    ```
+
+> 💡 **Tip:** Ensure your Move environment and the Aptos CLI are configured correctly to run the tests and scripts.
 
 ---
 
 ## 📖 Learning Modules
 
-### 1️⃣ Basic Module
+All core educational content resides in the `sources/` directory, structured by complexity.
 
-* Demonstrates **primitive types**, **strings**, **comments**, **functions**, **loops**, and **structs**
-* Includes functions like:
+### Basic Concepts (`sources/basic.move`)
 
-  * `primitive_types()`
-  * `greeting_string()`
-  * `sum_using_for()`
-  * `create_user()`
-* Shows **error handling** using `abort` and `assert!`
+* [cite_start]**`primitive_types()`:** Shows usage of `u8`, `u64`, `u128`, `bool`, and `address`[cite: 34, 35, 36].
+* [cite_start]**`sum_using_*`:** Demonstrates calculation loops using `while`, `for`, and `loop`[cite: 54, 58, 61].
+* [cite_start]**`isEven_abort` / `isEven_assert`:** Examples of proper error handling[cite: 66, 67].
+* [cite_start]**`create_user`:** A practical example of defining and using structs[cite: 70, 71].
 
-### 2️⃣ Intermediate Module
+### Intermediate Concepts (`sources/intermediate.move`)
 
-* Covers **function visibility** (`public`, `friend`, `private`)
-* Demonstrates module interaction rules
-* Introduces **entry functions**
+* [cite_start]**`local_variables()`:** Covers variable assignment, type annotations, and variable shadowing[cite: 2, 3, 5].
+* [cite_start]**`constants()`:** Demonstrates declaration and usage of module-level constants[cite: 6, 7].
+* [cite_start]**Vectors & Strings:** Examples using byte strings (`b"..."`) and hex strings (`x"..."`) for `vector<u8>`[cite: 11, 12].
+* [cite_start]**Signer:** Shows how to use the `&signer` type and the `signer::address_of` function[cite: 9, 10].
+* [cite_start]**Uses & Aliases:** Comprehensive examples of various `use` declaration syntax, including aliases and block scoping[cite: 18, 19, 24].
 
-### 3️⃣ Function Visibility Module
+### Function Visibility (`sources/fun_visibility.move`)
 
-* Explains **public(friend)** access modifier
-* Shows how **friend modules** can access specific functions
-* Demonstrates **entry functions** callable externally
+* [cite_start]**`public(friend)`:** Explains the restricted access modifier where only modules listed in the `friend` declaration can call the function[cite: 28, 29].
+* [cite_start]**`entry fun foo()`:** Demonstrates the structure of an externally callable entry function[cite: 30, 31].
 
 ---
 
 ## 💻 Scripts
 
-* **script_basic.move**: Simple increment operation
-* **script_signer.move**: Example interacting with a signer
-* Both use `std::debug::print` to display output
+Scripts are used to execute logic outside of modules, often as transaction payload examples.
+
+* [cite_start]**`script_basic.move`:** A simple example demonstrating basic arithmetic and using `std::debug::print`[cite: 80, 81].
+* [cite_start]**`script_signer.move`:** An example showing how to assert the address of the transaction **`signer`**[cite: 78].
 
 ---
 
 ## 🧪 Testing
 
-* Functions are marked with `#[test]`
-* Run all tests using:
+[cite_start]All modules include inline test functions marked with `#[test]` and `#[test_only]`[cite: 9, 33]. This ensures the examples are always working and provides immediate confirmation of the expected behavior.
 
-  ```bash
-  aptos move test
-  ```
-* Tests cover primitives, loops, functions, error handling, and structs
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
-
-* Fork the repository
-* Create a new branch for your feature or fix
-* Follow existing **coding style and conventions**
-* Test your changes
-* Submit a **pull request** with a clear description
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** – see [LICENSE](LICENSE) for details.
-
-````
-
-
-### `CONTRIBUTING.md`
-```markdown
-# 🤝 Contributing to Move Learning
-
-Thank you for your interest in contributing to the **Move Learning** project! Contributions are welcome and help make this repository more comprehensive and beginner-friendly.
-
----
-
-## How to Contribute
-
-1. **Fork the repository**
-   Click the “Fork” button at the top-right of this repository.
-
-2. **Create a new branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-````
-
-3. **Make your changes**
-
-   * Follow existing **code style and conventions**
-   * Add **comments** and **docstrings** where necessary
-   * Keep examples simple and clear for beginners
-
-4. **Test your changes**
-
-   ```bash
-   aptos move test
-   ```
-
-5. **Commit and push changes**
-
-   ```bash
-   git add .
-   git commit -m "Add description of your changes"
-   git push origin feature/your-feature-name
-   ```
-
-6. **Open a pull request**
-
-   * Include a **clear description** of your changes
-   * Reference any related issues if applicable
-
----
-
-## Guidelines
-
-* Focus on **educational clarity**: examples should be easy to understand
-* Follow **Move language best practices**
-* Respect the **existing project structure**
-* Avoid breaking existing tests
-
----
-
-## Need Help?
-
-If you have questions, feel free to open an **issue** or discuss improvements with the maintainers.
-
-```
-```
+Run all tests with:
+```bash
+aptos move test
